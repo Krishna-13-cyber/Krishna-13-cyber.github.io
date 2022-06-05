@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: home
 title:  "Week 2"
 date:   21-06-2022
 categories:
