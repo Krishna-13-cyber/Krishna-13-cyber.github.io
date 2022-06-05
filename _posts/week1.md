@@ -7,5 +7,9 @@ categories:
 
 # Coding Period (13th June - 5th September)
 
+## Week1:
 
+*Introductory Video
+*Going through the documentation of simpPRU
+*Adding test.py to Github actions
 

@@ -7,3 +7,7 @@ categories:
 
 # Coding Period (13th June - 5th September)
 
+## Week2
+
+*Adding the ON/OFF feature for the simppru console
+*Testing the feature on console
