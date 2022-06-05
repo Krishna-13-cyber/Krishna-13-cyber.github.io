@@ -9,5 +9,5 @@ categories:
 
 ## Week2
 
-*Adding the ON/OFF feature for the simppru console
-*Testing the feature on console
+* Adding the ON/OFF feature for the simppru console
+* Testing the feature on console

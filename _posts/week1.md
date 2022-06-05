@@ -9,7 +9,7 @@ categories:
 
 ## Week1:
 
-*Introductory Video
-*Going through the documentation of simpPRU
-*Adding test.py to Github actions
+* Introductory Video
+* Going through the documentation of simpPRU
+* Adding test.py to Github actions
 
