@@ -1,8 +1,8 @@
 ---
 layout: home
-title: "/home"
+title: "GSoC 2022 Tracker"
 permalink: /
 ---
 
 # GSoC 2022 Tracker
-I'm Krishna Narayanan, I am working under BeagleBoard.org for Google summer of code 2022 for the project of adding features to simpPRU. Here is my everyday progress.
+I'm Krishna Narayanan, I am working under BeagleBoard.org for Google summer of code 2022 for the project of adding features to simpPRU. Here is my progress tracker for the project.
