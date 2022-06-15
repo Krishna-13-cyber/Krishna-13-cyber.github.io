@@ -1,8 +1,10 @@
 ---
 layout: page
-title: /about
-permalink: /about/
+title: About Me
 ---
+<br>
+Heythere, I am Krishna Narayanan. I am a sophomore pursuing electronics and telecommunication engineering at VJTI, Mumbai.I am currently working under BeagleBoard.org for Google summer of code 2022 for the project of adding features to simpPRU. My areas of interest are compiler development,Operating systems,AI and ML.
+I am a quick and an avid learner eager to explore new domains!:)
+<br>
+<br>
 
-# Krishna Narayanan
-I am Krishna, a second year undergraduate student at VJTI, Mumbai. I am currently pursuing B.Tech in Electronics and Telecommunication Engineering.I have had a good experience and exposure with C,C++, python, esp-idf framework,git and java. I am coding since I was 16, I got selected for Google Summer of Code,2022 under BeagleBoard.org for the project of adding features to simpPRU.

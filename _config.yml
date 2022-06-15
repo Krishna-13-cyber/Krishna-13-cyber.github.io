@@ -1,13 +1,51 @@
-title: 'GSoC 2022 Progress Tracker'
+# Setup
+title: Rishikesh Donadkar
+url: https://getpoole.com
+paginate: 1
+baseurl: ""
+permalink: pretty
 
-header_pages:
-  - index.md
-  - about.md
+# Gems
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
 
-style: dark
+# Optimize Jekyll
+exclude:
+  - .editorconfig
+  - .git
+  - .jekyll-cache
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
 
-footer: 'follow me on <a href="https://github.com/Krishna-13-cyber">github</a>'
+sass:
+  sass_dir: _sass
+  style: :compressed
 
-# Build settings
-markdown: kramdown
-remote_theme: b2a3e8/jekyll-theme-console
+# Options
+
+# Replace this value and uncomment to enable Google Analytics tracking
+# ga_analytics: UA-000000-0
+
+# Specify the author for blog posts
+author:
+  name: Krishna Narayanan
+  url: https://twitter.com/mdo
+  email: markdotto@gmail.com
+
+# Custom vars
+version: 3.0.0
+
+# Navbar page list
+nav:
+  - title: About
+    url: /about
+
+  - title: GSoC'22
+    url: /gsoc
+
+  - title: Contact
+    url: /contact
