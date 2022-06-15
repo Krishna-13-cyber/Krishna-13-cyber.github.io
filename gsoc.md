@@ -15,10 +15,10 @@ title: GSoC'22 Beagleboard
   </div>
 </div>
 <br>
-I have been seleted as a GSoC contributor in the organization [BeagleBoard.org](https://beagleboard.org/) for the project of **Adding Features to simpPRU **.
+I have been seleted as a GSoC contributor in the organization [BeagleBoard.org](https://beagleboard.org/) for the project of <b>Adding Features to simpPRU<b>.
 <br>
 <br>
-The project I will be working this summer,2022 [visit]().
+The project I will be working this summer,2022 [visit](https://summerofcode.withgoogle.com/programs/2022/projects/atWuie8j).
 <br>
 <br>
 [GSoC 2022 Progress Tracker](/gsoc/home) 

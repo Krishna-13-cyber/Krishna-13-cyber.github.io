@@ -3,6 +3,8 @@ layout: page
 title: Contacts
 ---
 <br>
-Email:krishnanarayanan132002@gmail.com
-No.:9082411935
+<b>Email<b>: krishnanarayanan132002@gmail.com
+<br>
+<br>
+<b>Number<b>: 9082411935
 <br>
