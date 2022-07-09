@@ -11,3 +11,4 @@ title: home
 30 June 2022 ||Thursday     || Created PR's for [+=,-=,^](https://github.com/VedantParanjape/simpPRU/pull/39)
 01 July 2022 ||Friday       || Working on adding the next set of features[*=,-=](https://github.com/VedantParanjape/simpPRU/pull/42)
 02 July 2022 ||Saturday     || Updated the current testsuite with suggestions,was trying out [hexadecimal support](https://github.com/Krishna-13-cyber/simpPRU/tree/hex-support)
+03 July 2022 ||Sunday       || Cleaning the code and working on documentation
