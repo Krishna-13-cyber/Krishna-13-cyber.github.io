@@ -14,15 +14,17 @@ In the early stages of exploring the codebase of simpPRU,I had a bit of difficul
 
 The culmination week was here which was the decider for the selections,Anxiety and excitement was at its peak to know the results.On May 18,there was some activity on the GSoC dashboard where the proposals were rejected or just a blank,this created a lot of anxiousness and panic for the coming times.Finally,it was May 20,2022 and what I was longing for was in front in of me,![Acceptance](/assets/acceptance.jpeg)<br> 
 
+
+
 ## Coding period
-Now getting into the Coding Period after the selection procedure where we had a [Introductory meet](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjdk-aDuPj4AhWdxjgGHap5BeQQtwJ6BAgGEAI&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D8FW5SziGzD4&usg=AOvVaw0sWnEWysJjN4OQqplzd57V) for all the GSoC students of the current year 2022 in BeagleBoard.Org.<br>
+Now getting into the Coding Period after the selection procedure where we had a ![Introductory meet](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjdk-aDuPj4AhWdxjgGHap5BeQQtwJ6BAgGEAI&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D8FW5SziGzD4&usg=AOvVaw0sWnEWysJjN4OQqplzd57V) for all the GSoC students of the current year 2022 in BeagleBoard.Org.<br>
 
 Kicking off with the intial phase of coding I went through the PRU CookBook to know more about PRU and its working.I had a pocketbeagle with which I was experimenting with simpPRU console and trying out basic examples.
 The first task of coding started with adding python testsuite to Github Actions.I was ready with this by adding the python test script in .yml but it failed on arm32 as setup@python does not work for arm and a Dockerfile had to be written to overcome this.
 Next I tried out the arm32v7 image for python in Dockerfile but even that did not turn out well.I familiarized myself with docker was trying to use the original image with apt install python3 but did not change the build script.But this was the catch where the python script had to be run after compiled binary in build script.Vedant merged this for which I was stuck for a while and the Github Actions now succesfully ran the testscript giving the results for testcases.<br>
 
-Now there were two new problems which came into limelight that even though the tests failed in the Github Actions it gave a green signal as the .sim files(testcases) ran succesfully irrespective of its output.This script in Actions had to be successful only if script in Actions passed so for this I added the exit code for failure of testcases and give a failure in Github Actions in case of error/bug in testcase.<br>
-THe second which arised was arm32 was failing in one testcase where it gave a different output unlike the expected one.It was a hexadecimal number which had to negated,for edge cases as such strtol() gave a width of 32 bits for reading the input.
+Now there were two new problems which came into limelight that even though the tests failed in the Github Actions it gave a green signal as the .sim files(testcases) ran succesfully irrespective of its output.Pratim Ugale suggested that we should add an exit code so that Github Actions can display the bug in testing script.This script in Actions had to be successful only if script in Actions passed so for this I added the exit code for failure of testcases which gives a failure in Github Actions in case of error/bug in testcase.<br>
+THe second bug which arised was arm32 was failing in one testcase where it gave a different output unlike the expected one.It was a hexadecimal number which had to negated,for edge cases as such strtol() gave a width of 32 bits for reading the input.
 ```
 {integer}               {
   /*octal if first digit is 0, hexadecimal if first two characters are 0x or 0X, decimal otherwise*/
@@ -51,5 +53,9 @@ The button is designed as an autotoggle which depending on the state of PRU give
 Component button = Button(" PRU ", NULL);
 ```
 
-This button is generated with an empty function for Button Component in FTUXI due to which it does not eed a manual click and goes for an uncontrolled exit on a click.<br>
-![PRU-STATUS](/assets/prustatus.jpg)
+This button is generated with an empty function for Button Component in FTUXI due to which it does not eed a manual click and goes for an uncontrolled exit on a click.![PRU-STATUS](/assets/prustatus.jpg)<br>
+
+
+For the week3,I had already planned and was ready with half of the work to be done which I had done in the pre-gsoc period as this part was bit easy.I had planned to add the Add,Subtract,Multiply and Divide assignment operators covering the basic operations which would be really useful for computation and in a faster way.I just had to test thoroughly for its working in simppru and simmpru-console.Many a times I used to run the current simppru rather using generated binary simppru which was updated.
+Archisman addressed me with this part and adviced me the to check the generated C file whether things intended are printed in the correct way.
+
