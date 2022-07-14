@@ -12,7 +12,7 @@ The journey starts from the pre-gsoc period of undertanding of what was simpPRU,
 The concept was quite interesting and had decided to give a shot to apply for the project of [Adding features to simpPRU](https://github.com/VedantParanjape/simpPRU) and started exploring its codebase.When I decided to go for this project,I read about the previous year projects in [BeagleBoard.org](https://beagleboard.org/),to know more about the Organization and its working culture.<br>
 In the early stages of exploring the codebase of simpPRU,I had a bit of difficulty in understanding the process of its working.The lexer,parser was comprehensible but the further part from the integration of Codeprinter to print the values,expressions that were stored in ast was the main part which I could not catch at the first place but once understood I was through with it.<br>
 
-The culmination week was here which was the decider for the selections,Anxiety and excitement was at its peak to know the results.On May 18,there was some activity on the GSoC dashboard where the proposals were rejected or just a blank,this created a lot of anxiousness and panic for the coming times.Finally,it was May 20,2022 and what I was longing for was in front in of me,![Acceptance](/assets/acceptance.jpeg).<br> 
+The culmination week was here which was the decider for the selections,Anxiety and excitement was at its peak to know the results.On May 18,there was some activity on the GSoC dashboard where the proposals were rejected or just a blank,this created a lot of anxiousness and panic for the coming times.Finally,it was May 20,2022 and what I was longing for was in front in of me,![Acceptance](/assets/acceptance.jpeg)<br> 
 
 ## Coding period
 Now getting into the Coding Period after the selection procedure where we had a [Introductory meet](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjdk-aDuPj4AhWdxjgGHap5BeQQtwJ6BAgGEAI&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D8FW5SziGzD4&usg=AOvVaw0sWnEWysJjN4OQqplzd57V) for all the GSoC students of the current year 2022 in BeagleBoard.Org.<br>
@@ -33,7 +33,7 @@ THe second which arised was arm32 was failing in one testcase where it gave a di
 
 So as to resolve this I used strtoll() to provide a 64 width for input which works well with this.<br>
 
-Entering into the Week2 I had planned the Auto-toggle button for the PRU Status,for this I had to see the condition for the state of the PRU whether *running* or *offline* in the remoteproc. <br>
+Entering into the Week2 I had planned the Auto-toggle button for the PRU Status,for this I had to see the condition for the state of the PRU whether **running** or **offline** in the remoteproc.<br>
 ```
     int bits_read = read(remoteproc_start, state, sizeof(char)*7);
 
@@ -52,14 +52,4 @@ Component button = Button(" PRU ", NULL);
 ```
 
 This button is generated with an empty function for Button Component in FTUXI due to which it does not eed a manual click and goes for an uncontrolled exit on a click.<br>
-[PRU-STATUS](/assets/prustatus.jpg)
-
-
-
-
-
-
-
-
-<br>
-<br>
+![PRU-STATUS](/assets/prustatus.jpg)
