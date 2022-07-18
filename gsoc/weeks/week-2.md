@@ -11,3 +11,4 @@ title: home
 23 June 2022 ||Thursday     || PR opened for the [PRU Status](https://github.com/VedantParanjape/simpPRU/pull/37)
 24 June 2022 ||Friday       || Testing outputs coming different for x86_64 and 32 arm architecture for some desired values
 25 June 2022 ||Saturday     || Updated the current testsuite with [exit code for failure of testcases](https://github.com/VedantParanjape/simpPRU/pull/38)  
+26 June 2022 ||Sunday       || Working on a [design bug](https://github.com/VedantParanjape/simpPRU/runs/6981043477?check_suite_focus=true)
