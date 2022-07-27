@@ -12,3 +12,4 @@ title: home
 | [week-3](/gsoc/weeks/week-3)  |28 June 2022 - 03 July 2022 
 | [week-4](/gsoc/weeks/week-4)  |04 July 2022 - 10 July 2022 
 | [week-5](/gsoc/weeks/week-5)  |11 July 2022 - 17 July 2022 
+| [week-6](/gsoc/weeks/week-6)  |18 July 2022 - 24 July 2022 
