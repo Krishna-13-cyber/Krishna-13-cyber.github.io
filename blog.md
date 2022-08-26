@@ -94,3 +94,58 @@ So,the blocker remains that until I get the values already published in the pape
 Coming to the week6,Initially I had used <time.h> to test the different compiler flags for their compilation time and how efficient they were but that somehow it did not give the appropriate results.The intention was to test different flags with their compilation time but it is not the right way to test flags for their performance.
 Then Vedant adviced me to use popen() pipestream for getting the the compilation output.With this I included this pipestream to get the stdout in the terminal and also added the support for compiler flags -O1,-O2,-O3 which can be used during compilation with gcc-pru.The compiler flags play a very important as each flag has its own value and purpose which sometimes reduces the size of the code,brings in debugging information,enabled warnings and so forth..<br>
 
+The second phase of coding period had commenced after the evaluation period was over.
+Vedant suggested and adviced me to improve my quality of code as it needs to maintain the standard and convention of codebase.
+
+Now the tasks which were lined up were to add column number support for precise error location followed by fixing the support of calling the return statements anywhere in the function body.I had added the support for column number for precise error location in resolving errors.The yylloc helps in getting the 
+column number of the error location.
+```
+  static void updating_column()
+  {
+    char* s;
+    yylloc.first_line = curr_line;
+    yylloc.first_column = columnnumber;
+    for(s = yytext; *s != '\0'; s++)
+    {
+      if(*s == '\n')
+      {
+        curr_line += 1;
+        columnnumber = 0;
+      }
+      else
+      {
+        columnnumber += 1;
+      }
+    }
+    yylloc.last_line = curr_line;
+    yylloc.last_column = columnnumber - 1;
+  }
+  #define YY_USER_ACTION updating_column();
+```
+The support for return statements was the challenging part, I had planned different approaches in the start which was to add define return statements in the grammar itself within looping structures and conditional block.But these have limitations of having a fixed grammar of using return statements irrespective of the choice of user.This method was not feasible.Then I had planned of adding something like compound statement with a return statement in the end but even that was not a good convention either.<br>
+```
+compound_statement: LBRACE statement_list return_statement RBRACE {
+                    $$ = $2;
+                  }
+                  ;
+```
+
+The third task of the second evaluation was to write a research paper which had to be published on simpPRU,I had prepared a draft of it and was ready with it.The need, methodology and implementation of simpPRU had been mentioned in the research paper.The research paper cannot be published at present as it needs more information and research in this area.<br>
+![Flowchart](/assets/Flowchart.jpeg)
+
+The fourth task was I prepared myself with the conditional operators which I had planned along with unary operations which included unary increment and decrement.I was referring some resources where I got a click of adding conditional operators.I had tried to maintain the grammar of it similar to that of C syntax.With addition of this the user work with conditional operators for a single condition with two cases.The grammar that is defined is as follows <br>
+```
+
+conditional_operator: arithmetic_expression OPR_ASSIGNMENT boolean_expression QUESTION arithmetic_expression COLON arithmetic_expression SEMICOLON {
+                        $$ = create_conditional_operator_node($1, $3, $5, $7);
+                    }
+                    | boolean_expression OPR_ASSIGNMENT boolean_expression QUESTION boolean_expression COLON boolean_expression SEMICOLON {
+                        $$ = create_conditional_operator_node($1, $3, $5, $7);
+                    }
+                    ;
+
+```
+ I was also planning for a quit button feature which can be included in the console as control+C is not a suitable convention.I was stuck on this for a lot of time ,it was the type which was hindering the process and later used lamda function for referencing it, Shreyas Atre assisted me with this who had a prior experience if using FTUXI in his beagle-config project during his GSoC 2021.<br>
+![Quit_button](/assets/quit_button.png)
+
+ The final task which I decided to end with was to add a basic support for AI-64 in simpPRU, at least detection of device and a binary to be loaded gets generated...<br>
